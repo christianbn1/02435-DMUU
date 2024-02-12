@@ -15,13 +15,13 @@ cost_coffee = round.(10 * rand(W, T), digits=2)
 # Creation of the penalty price, number between 10 and 20
 cost_miss = round.(10 * rand(W) .+ 10, digits=2)
 # Creation of the transportation cost, W rows and W columns, 5 everywhere
-cost_tr = 3*ones(W, W)
+cost_tr = 5*ones(W, W)
 # Creation of the storage capacities, 1 row and W columns, 10 everywhere
 warehouse_capacities = 10*ones(W)
 # Creation of the transport capacities, W rows and W columns, 3 everywhere
 transport_capacities = 3*ones(W,W)
-# Creation of the demand, W rows and T columns, 10 everywhere
-demand_coffee = round.(10 * ones(W, T), digits=2)
+# Creation of the demand, W rows and T columns, 4 everywhere
+demand_coffee = 4*ones(W, T)
 
 
 #Declare model with Gurobi solver
